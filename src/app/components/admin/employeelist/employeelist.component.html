@@ -1,0 +1,12 @@
+<div class="container">
+    <h3>Employee List</h3>
+    <button class="btn btn-primary" (click)="addEmployee()">Add Employee</button>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let employee of employees">
+        {{ employee.name }} - {{ employee.email }}
+        <button class="btn btn-secondary" (click)="editEmployee(employee.id)">Edit</button>
+        <button class="btn btn-danger" (click)="deleteEmployee(employee.id)">Delete</button>
+      </li>
+    </ul>
+  </div>
+  
